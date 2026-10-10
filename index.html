@@ -1,0 +1,123 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>〇＆COMPANY369</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#111;background:#fff;font-family:Arial,'Noto Sans JP',sans-serif}header{height:70px;display:flex;align-items:center;justify-content:flex-end;padding:0 5vw;border-bottom:1px solid #eee;position:sticky;top:0;background:#fffffff2;z-index:5}.mark{font-family:Georgia,serif;font-size:22px;border:1px solid;padding:4px 9px}nav a{color:#111;text-decoration:none;font-size:11px;letter-spacing:.18em;margin-left:28px}.hero{min-height:75vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 120px}.logo{font-family:Georgia,serif;font-size:clamp(92px,16vw,190px);line-height:.8;display:inline-block;border-top:3px solid;border-bottom:3px solid;padding:10px 30px 16px}.logo-img{max-width:520px;margin:0 auto}.logo-img img{display:block;width:100%;height:auto;mix-blend-mode:multiply}.brand{font-size:13px;letter-spacing:.5em;margin:26px 0 18px}.crew{font-family:Georgia,serif;letter-spacing:.38em;font-size:14px}.hero h1{font-family:serif;font-weight:400;letter-spacing:.15em;font-size:clamp(23px,3vw,38px);margin:45px 0 24px}.hero p{font-family:serif;line-height:2.1;font-size:14px}.works{max-width:1120px;margin:auto;padding:90px 5vw 150px}.works h2{text-align:center;font-family:Georgia,serif;letter-spacing:.18em;font-weight:400;font-size:27px;margin:0 0 90px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:100px 55px}.card{text-align:center}.frame{aspect-ratio:1/1;background:#fafafa;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mockup{position:relative;width:100%;height:100%;background:#fff;overflow:hidden}
+.tee-photo{position:absolute;left:2%;top:10%;width:96%;height:80%;object-fit:contain;filter:none;transform:none}
+.print-art{position:absolute;left:50%;top:32%;transform:translateX(-50%);width:48%;aspect-ratio:297/210;object-fit:contain;mix-blend-mode:multiply;filter:none}
+.mockup:after{display:none}.no{font-size:10px;letter-spacing:.18em;color:#777;margin-top:20px}.card h3{font-family:Georgia,'Noto Serif JP',serif;font-size:15px;font-weight:400;letter-spacing:.08em;margin:8px 0}.about{border-top:1px solid #eee;padding:130px 24px;text-align:center}.about h2{font-family:Georgia,serif;letter-spacing:.25em;font-weight:400}.about p{font-family:serif;line-height:2.2}.foot{border-top:1px solid #eee;padding:35px 5vw;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.18em}
+@media(max-width:700px){header{height:58px;padding:0 20px}nav a{display:none}.hero{min-height:78vh;padding:80px 20px 100px}.logo{font-size:100px;padding:8px 22px 13px}.logo-img{max-width:310px}.brand{font-size:10px;letter-spacing:.32em}.crew{font-size:11px;letter-spacing:.25em}.hero h1{margin-top:50px;font-size:24px}.hero p{font-size:12px}.works{padding:80px 24px 120px}.works h2{margin-bottom:70px}.grid{grid-template-columns:1fr;gap:100px}.frame{max-width:360px;margin:auto}.no{margin-top:18px}.about{padding:100px 28px}.foot{display:block;text-align:center;line-height:2.2}}
+
+.buy-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:15px;min-width:150px;height:42px;padding:0 24px;border:1px solid #111;background:#111;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.12em;transition:.2s}
+.buy-btn:hover{background:#fff;color:#111}
+.buy-btn.is-disabled{background:#f5f5f5;color:#999;border-color:#ddd;cursor:default}
+@media(max-width:700px){.buy-btn{min-width:170px;height:44px;margin-top:14px}}
+
+/* Featured artworks: independent of the original product grid */
+.featured{padding:85px 24px 100px;background:#f8f8f7;text-align:center;overflow:hidden}
+.featured h2{font-family:Georgia,serif;font-weight:400;letter-spacing:.2em;font-size:25px;margin:0 0 12px}
+.featured-sub{font-size:11px;letter-spacing:.16em;color:#777;margin:0 0 38px}
+.slider-shell{max-width:700px;margin:auto;position:relative}
+.slider-window{overflow:hidden;background:#fff}
+.slider-track{display:flex;transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+.slide{flex:0 0 100%;min-width:0;padding:30px 55px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.slide img{display:block;width:100%;max-width:490px;height:330px;object-fit:contain}
+.slide-name{font:400 16px Georgia,'Noto Serif JP',serif;letter-spacing:.08em;margin:18px 0 0}
+.slider-arrow{position:absolute;top:43%;transform:translateY(-50%);z-index:2;border:1px solid #ddd;background:#fff;color:#111;width:38px;height:44px;font-size:22px;cursor:pointer}
+.slider-prev{left:8px}.slider-next{right:8px}.slider-arrow:hover{background:#111;color:#fff}
+.slider-dots{display:flex;justify-content:center;gap:11px;margin-top:22px}
+.slider-dot{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#ccc;cursor:pointer}
+.slider-dot[aria-current="true"]{background:#111;transform:scale(1.25)}
+@media(max-width:700px){.featured{padding:65px 12px 75px}.featured h2{font-size:22px}.slide{padding:22px 36px 15px}.slide img{height:240px}.slide-name{font-size:13px}.slider-arrow{width:30px;height:38px}.slider-prev{left:2px}.slider-next{right:2px}}
+@media(prefers-reduced-motion:reduce){.slider-track{transition:none}}
+
+/* v9: logo and rotating artwork within the first viewport */
+.first-screen{height:calc(100svh - 70px);min-height:510px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(8px,2vh,20px);padding:12px 20px 16px;overflow:hidden}
+.first-logo{text-align:center;flex:0 0 auto}
+.first-logo .logo-img{width:min(240px,32vh,48vw);margin:auto}
+.first-logo .brand{font-size:11px;letter-spacing:.35em;margin:5px 0 0}
+.first-screen .featured{width:100%;padding:0;background:transparent;min-height:0;flex:1;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.first-screen .slider-shell{width:min(100%,610px);max-height:100%;}
+.first-screen .slider-window{background:#fafafa}
+.first-screen .slide{padding:10px 46px 6px}
+.first-screen .slide img{height:clamp(170px,38vh,370px);max-width:100%;object-fit:contain}
+.first-screen .slide-name{margin:6px 0 0;font-size:13px}
+.first-screen .slider-dots{margin-top:10px;gap:9px}
+.first-screen .slider-arrow{top:45%}
+.intro{text-align:center;padding:95px 20px 100px}
+.intro h1{font:400 clamp(22px,3vw,34px) Georgia,serif;letter-spacing:.12em;margin:28px 0}
+.intro p{font:14px/2.1 Georgia,serif}
+@media(max-width:700px){.first-screen{height:calc(100svh - 58px);min-height:450px;padding:10px 8px 14px;gap:8px}.first-logo .logo-img{width:min(205px,30vh,62vw)}.first-logo .brand{font-size:9px;letter-spacing:.22em}.first-screen .slide{padding:8px 36px 5px}.first-screen .slide img{height:clamp(160px,39vh,310px)}.first-screen .slide-name{font-size:12px}.first-screen .slider-dots{gap:8px;margin-top:8px}.intro{padding:75px 20px}.intro p{font-size:12px}}
+@media(max-height:650px){.first-logo .logo-img{width:min(150px,24vh)}.first-screen .slide img{height:35vh}.first-screen .slider-dots{margin-top:5px}}
+
+/* v10: clean single logo, message to its right, slider below */
+.first-screen{justify-content:flex-start;gap:12px;padding-top:18px}
+.top-brand-row{width:min(100%,800px);display:grid;grid-template-columns:minmax(170px, 0.9fr) minmax(0,1.5fr);gap:32px;align-items:center;flex:0 0 auto}
+.first-logo{text-align:left}.first-logo .logo-img{width:100%;max-width:300px;margin:0}
+.first-logo .logo-img img{mix-blend-mode:normal}.first-logo .brand{text-align:center;letter-spacing:.17em;font-size:10px;margin-top:4px}
+.top-message{text-align:left}.top-message .crew{font-size:11px;letter-spacing:.14em}.top-message h1{font-family:Georgia,serif;font-size:clamp(20px,2.5vw,30px);font-weight:400;letter-spacing:.08em;margin:10px 0}.top-message p{font-size:12px;line-height:1.8;margin:0}
+.first-screen .featured{justify-content:flex-start}.first-screen .slide img{height:clamp(160px,38vh,360px)}
+@media(max-width:700px){.first-screen{padding:12px 12px 12px;gap:12px}.top-brand-row{grid-template-columns:40% 1fr;gap:12px}.first-logo .logo-img{width:100%;max-width:none}.first-logo .brand{font-size:8px;letter-spacing:0}.top-message .crew{font-size:9px;letter-spacing:0}.top-message h1{font-size:clamp(15px,4vw,22px);margin:5px 0}.top-message p{font-size:9px;line-height:1.55}.first-screen .slide img{height:clamp(150px,40vh,310px)}}
+@media(max-width:390px){.top-message p{font-size:8px}.top-brand-row{grid-template-columns:38% 1fr;gap:9px}}
+/* v12: wider breathing room between logo and message */
+@media(min-width:701px){.top-brand-row{width:min(100%,1080px);grid-template-columns:minmax(220px,0.85fr) minmax(0,1.15fr);column-gap:clamp(85px,10vw,165px)}}
+@media(max-width:700px){.top-brand-row{column-gap:clamp(20px,5vw,38px);grid-template-columns:38% minmax(0,1fr)}}
+
+/* V17: paired slideshow with original art assets, female white / male black */
+.first-screen .slide .old-slide-img{display:none!important}
+.model-half{position:relative;min-width:0;overflow:hidden;background:#f6f6f6}
+.tee-label{position:absolute;bottom:10px;left:10px;background:#ffffffe0;padding:5px 8px;font:10px Arial,sans-serif;letter-spacing:.08em}
+.first-screen .slide .model-half img{height:auto!important;max-width:none!important;aspect-ratio:11/8;object-fit:cover}
+.first-screen .slide .model-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;width:100%}
+.first-screen .slide{min-width:0;box-sizing:border-box}
+@media(max-width:700px){.first-screen .slide{padding:4px 28px 8px}.first-screen .slide .model-pair{gap:5px}}
+
+/* v19: wider paired lookbook with comfortable gap and proportional chest prints */
+.first-screen{height:auto!important;min-height:0!important;padding-bottom:55px!important;overflow:visible!important}
+.first-screen .featured{width:min(100%,1400px)!important;max-width:1400px!important;margin:0 auto!important;padding:0 20px!important}
+.first-screen .slider-shell{width:100%!important;max-width:1400px!important;max-height:none!important}
+.first-screen .slide{padding:8px 52px 12px!important}
+.first-screen .slide .model-pair{gap:clamp(24px,4.5vw,76px)!important}
+.first-screen .slide .model-half img{width:100%!important;height:auto!important;aspect-ratio:11/8!important;object-fit:cover!important}
+.first-screen .slider-window{background:#fff!important}
+.first-screen .slider-arrow{top:44%!important}
+@media(max-width:700px){
+.first-screen .featured{padding:0 3px!important}
+.first-screen .slide{padding:6px 27px 10px!important}
+.first-screen .slide .model-pair{gap:14px!important}
+.first-screen .slide .model-half img{aspect-ratio:11/9!important}
+.tee-label{font-size:7px!important;bottom:3px!important;left:3px!important;padding:3px!important}
+}
+
+/* v19: wider paired lookbook with comfortable gap and proportional chest prints */
+.first-screen{height:auto!important;min-height:0!important;padding-bottom:55px!important;overflow:visible!important}
+.first-screen .featured{width:min(100%,1400px)!important;max-width:1400px!important;margin:0 auto!important;padding:0 20px!important}
+.first-screen .slider-shell{width:100%!important;max-width:1400px!important;max-height:none!important}
+.first-screen .slide{padding:8px 52px 12px!important}
+.first-screen .slide .model-pair{gap:clamp(24px,4.5vw,76px)!important}
+.first-screen .slide .model-half img{width:100%!important;height:auto!important;aspect-ratio:11/8!important;object-fit:cover!important}
+.first-screen .slider-window{background:#fff!important}
+.first-screen .slider-arrow{top:44%!important}
+@media(max-width:700px){
+.first-screen .featured{padding:0 3px!important}
+.first-screen .slide{padding:6px 27px 10px!important}
+.first-screen .slide .model-pair{gap:14px!important}
+.first-screen .slide .model-half img{aspect-ratio:11/9!important}
+.tee-label{font-size:7px!important;bottom:3px!important;left:3px!important;padding:3px!important}
+}
+</style></head><body><header><nav><a href="#works">ARTWORKS</a><a href="#about">ABOUT</a></nav></header><main><section class="first-screen"><div class="top-brand-row"><div class="first-logo"><div class="logo-img"><img src="assets/logo369-clean.png" alt="369 logo"></div><div class="brand">〇 &amp; COMPANY369</div></div><div class="top-message"><h1>イメージを作品に</h1><p>経験も肩書もない。<br>アンダーグラウンドデザイナーが立ち上げた<br>FacelessArtistCrew</p></div></div><section class="featured" aria-label="自動で切り替わる作品ギャラリー"><div class="slider-shell" id="featuredSlider"><button type="button" class="slider-arrow slider-prev" aria-label="前の作品">‹</button><div class="slider-window"><div class="slider-track"><div class="slide" role="group" aria-roledescription="スライド" aria-label="1 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-01.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-01.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-01.jpg" alt="DRUG BOY" loading="lazy"><p class="slide-name">DRUG BOY</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="2 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-02.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-02.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-02.jpg" alt="生きてみて NO.1" loading="lazy"><p class="slide-name">生きてみて NO.1</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="3 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-03.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-03.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-03.jpg" alt="生きてみて NO.2" loading="lazy"><p class="slide-name">生きてみて NO.2</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="4 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-04.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-04.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-04.jpg" alt="SAMSARA" loading="lazy"><p class="slide-name">SAMSARA</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="5 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-05.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-05.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-05.jpg" alt="BLACK SHEEP" loading="lazy"><p class="slide-name">BLACK SHEEP</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="6 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-06.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-06.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-06.jpg" alt="FU-NI" loading="lazy"><p class="slide-name">FU-NI</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="7 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-07.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-07.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-07.jpg" alt="MEMENTO MORI" loading="lazy"><p class="slide-name">MEMENTO MORI</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="8 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-08.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-08.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-08.jpg" alt="君にはわからないだろう 僕の思想" loading="lazy"><p class="slide-name">君にはわからないだろう 僕の思想</p></div><div class="slide" role="group" aria-roledescription="スライド" aria-label="9 / 9"><div class="model-pair"><div class="model-half"><img src="assets/dual-female-09.jpg" alt="白Tシャツ 女性モデル"><span class="tee-label">WHITE / WOMEN</span></div><div class="model-half"><img src="assets/dual-male-09.jpg" alt="黒Tシャツ 男性モデル・白黒反転プリント"><span class="tee-label">BLACK / MEN · INVERTED PRINT</span></div></div><img class="old-slide-img" src="assets/model-09.jpg" alt="糸" loading="lazy"><p class="slide-name">糸</p></div></div></div><button type="button" class="slider-arrow slider-next" aria-label="次の作品">›</button></div><div class="slider-dots" aria-label="作品を選択"></div></section></section><section class="works" id="works"><h2>ARTWORKS</h2><p style="text-align:center;margin:-60px 0 85px;font-size:11px;letter-spacing:.14em;color:#777">WHITE T-SHIRT / A4 LANDSCAPE CHEST PRINT</p><div class="grid">
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-01.jpg" alt="DRUG BOY"></div></div><div class="no">#002</div><h3>DRUG BOY</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-02.jpg" alt="生きてみて NO.1"></div></div><div class="no">#003</div><h3>生きてみて NO.1</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-03.jpg" alt="生きてみて NO.2"></div></div><div class="no">#004</div><h3>生きてみて NO.2</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-04.jpg" alt="SAMSARA"></div></div><div class="no">#005</div><h3>SAMSARA</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-05.jpg" alt="BLACK SHEEP"></div></div><div class="no">#006</div><h3>BLACK SHEEP</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-06.jpg" alt="FU-NI"></div></div><div class="no">#007</div><h3>FU-NI</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-07.jpg" alt="MEMENTO MORI"></div></div><div class="no">#008</div><h3>MEMENTO MORI</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-08.jpg" alt="君にはわからないだろう 僕の思想"></div></div><div class="no">#009</div><h3>君にはわからないだろう 僕の思想</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+<article class="card"><div class="frame"><div class="mockup"><img class="tee-photo" src="assets/tshirt-reference-white.jpg" alt="白Tシャツ"><img class="print-art" src="assets/art-09.jpg" alt="糸"></div></div><div class="no">#010</div><h3>糸</h3><a class="buy-btn is-disabled" href="#" onclick="return false;" aria-disabled="true">商品を買う</a></article>
+</div></section><section class="about" id="about"><h2>ABOUT</h2><p>イメージを作品に<br><br>経験も肩書もない。<br>アンダーグラウンドデザイナーが立ち上げた<br>FacelessArtistCrew<br><br>〇＆COMPANY369</p></section></main><footer class="foot"><span>369　〇 & COMPANY369</span><span>FACELESS ARTIST CREW.　© 2026</span></footer><script>
+(()=>{const root=document.getElementById('featuredSlider');if(!root)return;const track=root.querySelector('.slider-track');const slides=[...track.children];const dots=document.querySelector('.slider-dots');let index=0,timer;const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+slides.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.className='slider-dot';b.setAttribute('aria-label',`作品 ${i+1} を表示`);b.addEventListener('click',()=>{show(i);restart()});dots.appendChild(b)});
+function show(i){index=(i+slides.length)%slides.length;track.style.transform=`translateX(-${index*100}%)`;[...dots.children].forEach((d,n)=>d.setAttribute('aria-current',String(n===index)))}
+function stop(){clearInterval(timer)}function start(){if(!reduced)timer=setInterval(()=>show(index+1),4000)}function restart(){stop();start()}
+root.querySelector('.slider-prev').addEventListener('click',()=>{show(index-1);restart()});root.querySelector('.slider-next').addEventListener('click',()=>{show(index+1);restart()});root.addEventListener('mouseenter',stop);root.addEventListener('mouseleave',start);root.addEventListener('focusin',stop);root.addEventListener('focusout',e=>{if(!root.contains(e.relatedTarget))start()});document.addEventListener('visibilitychange',()=>document.hidden?stop():restart());show(0);start();
+})();
+</script></body></html>
